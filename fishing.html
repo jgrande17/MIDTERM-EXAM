@@ -1,7 +1,4 @@
-<html>
-<head>
-<title>Fishing</title>
-</head>
+<html><head><title>Fishing</title></head>
 <body bgcolor="#FFFF99" text="#800000">
 <h1 align="center">FISHING STORE ORDER FORM</h1>
 <p align="center">We rent all of our fishing equipment by the week.</p>
@@ -45,4 +42,26 @@
 <p align="center">
 <input type="submit" value="Calculate your order" name="btnSubmit" onClick="calcTotal()">
 <input type="reset" value="Reset" name="btnReset">
-<p align="center">Yor Total is:</p>
+<p align="center">Yor Total is</p>
+<input type="text" name="txtTotal" size="10" value="0.00"</p>
+<p align="center">Tender</p>
+<input type="text" name="txtTender" size="10" value="0.00"</p>
+<p align="center">Change</p>
+<input type="text" name="txtChange" size="10" value="0.00"</p>
+</form>
+<scrpit lanuage="javascript">
+  function calcTotal(){
+    var strRod, strBOx, strTBox, prRod, prBox, prTBox, strTotal;
+    strRod=document.form.qRod.value;
+    strBox=document.form.qBox.value;
+    strTBox=document.form.qTBox.value;
+    prRod=document.form.txtRod.value;
+    prBox=document.form.txtBox.value;
+    prTBox=document.form.txtTBox.value;
+    strRod=parseInt(strRod)* prRod;
+    strBox=parseInt(strBox)* prBox;
+    strTBox=parseInt(strTBox)* prTBox;
+    strTotal=(strRod + strBox + strTBox);
+    document.form.txtTotal.value=strTotal;
+}
+  </scrpit></body></html>
