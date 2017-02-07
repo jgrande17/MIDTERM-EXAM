@@ -41,7 +41,6 @@
 <input type="text" name="txtTender" size="10" value="0.00">
 <p align="center">Change</p>
 <input type="text" name="txtChange" size="10" value="0.00">
-</form>
 <scrpit lanuage="javascript">
   function calcTotal(){
     var strRod, strBOx, strTBox, prRod, prBox, prTBox, strTotal;
@@ -67,10 +66,11 @@
       <input type="submit" value="Silver" name="bS" onClick="selectColor('Sliver')">
       <input type="submit" value="Red" name="bR" onClick="selectColor('Red')">
   </p>
-</body>
-</html>
 <script language="javascript">
   function selectColor(selectColor){
     document.bgcolor=selectColor;
   }
   </script>
+  </form>
+  </body>
+</html>
